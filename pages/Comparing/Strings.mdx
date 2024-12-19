@@ -1,0 +1,17 @@
+#Comparing Strings
+
+In Java, Strings are stored as objects. When you compare two strings using the == operator, you are comparing the memory addresses of the two objects. To compare the actual values, use .equals():
+
+```java
+String str1 = "foo";
+String str2 = "foo";
+
+System.out.println(str1 == str2); // true
+System.out.println(str1.equals(str2)); // true
+
+String str3 = new String("foo");
+String str4 = new String("foo");
+
+System.out.println(str3 == str4); // false
+System.out.println(str3.equals(str4)); // true
+```

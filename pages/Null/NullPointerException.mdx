@@ -1,0 +1,14 @@
+# Beware of the Null Pointer Exceptio!
+
+In Java, variables with null value can become dangerous and unpredictable.
+Avoid:
+- Calling instance methods on a null object
+- Accessing or modifying fields of a null object
+- using *instanceof* to check for a null object
+
+```java
+String str = null;
+System.out.println(str.length()); // NullPointerException
+System.out.println(str.equals("")); // NullPointerException
+System.out.println(str instanceof String); //Evaluates to false
+```
