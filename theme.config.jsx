@@ -8,7 +8,7 @@ export default {
     </span>
   ),
   project: {
-    link: "https://github.com/shuding/nextra",
+    link: "https://github.com/123654-dev/weird-java-wiki",
   },
   color: {
     hue: 43,
