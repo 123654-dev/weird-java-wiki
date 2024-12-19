@@ -10,6 +10,7 @@ export default {
   project: {
     link: "https://github.com/123654-dev/weird-java-wiki",
   },
+  docsRepositoryBase: 'https://github.com/123654-dev/weird-java-wiki/tree/master',
   color: {
     hue: 43,
     saturation: 53,
