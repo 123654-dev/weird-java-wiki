@@ -1,3 +1,4 @@
 # Iterators
 
 In Java, you can only delete stuff with `it.remove()` and only after calling `it.next()`.
+Also beware of iterating through a list or set and modifying it at the same time. This can lead to a `ConcurrentModificationException`.
