@@ -1,0 +1,11 @@
+# Arrays.toString() vs. Arrays.deepToString()
+
+In Java, `Arrays.toString()` is a handy method to print the values of an array instead of an object reference. For multi-dimensional arrays however, use `Arrays.deepToString()`. Otherwise, you will get an array of memory addresses instead of the values.
+
+```java
+int[] arr = {1, 2, 3, 4, 5};
+int[][] arr2D = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+System.out.println(Arrays.toString(arr)); // [1, 2, 3, 4, 5]
+System.out.println(Arrays.toString(arr2D)); // e.g. [[I@6d06d69c, [I@7852e922, [I@4e25154f]
+System.out.println(Arrays.deepToString(arr2D)); // [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+```
