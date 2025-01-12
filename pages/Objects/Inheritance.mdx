@@ -1,0 +1,42 @@
+# Inheritance Shenanigans
+
+A reference variable to a parent class Parent can also point to an Object of a child class Child (Upcasting).
+In this case, the type of the **variable** is Parent, but the type of the **object** is Child.
+Note that the variable type determines which methods can be called on the object, while the object type determines in which class the method is actually executed **(!)**
+
+Also, the @override annotation is used to indicate that a method is meant to override a method in a parent class. If the method does not override a method in a parent class, the compiler will throw an error. Otherwise, this annotation is optional and functionally useless!!
+So, if a method overrides a method in a parent class but is implemented incorrectly, the compiler will not throw an error, but the method will not be executed as expected.
+
+```java
+public class Parent {
+    public void print() {
+        System.out.println("Parent");
+    }
+}
+
+public class Child extends Parent {
+    public void print() {
+        System.out.println("Child");
+    }
+
+    public void skibidi() {
+        System.out.println("foo");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Parent parent = new Parent();
+        parent.print(); // Parent
+        parent.skibidi(); // Compilation error
+
+        Child child = new Child();
+        child.print(); // Child
+        child.skibidi(); // foo
+
+        Parent parentChild = new Child();
+        parentChild.print(); // Child
+        parentChild.skibidi(); // Compilation error
+    }
+}
+```
